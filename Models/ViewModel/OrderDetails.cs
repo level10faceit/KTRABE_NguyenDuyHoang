@@ -1,0 +1,22 @@
+﻿using _25dh110362.Models;
+using System;
+using System.Collections.Generic;
+
+
+namespace _25dh110362.Models.ViewModel
+{
+    
+
+    public partial class OrderDetails
+    {
+        public int ID { get; set; }
+        public int ProductID { get; set; }
+        public int OrderID { get; set; }
+        public int Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+        public Nullable<decimal> TotalPrice { get; set; }
+
+        public virtual Order Order { get; set; }
+        public virtual Product Product { get; set; }
+    }
+}
